@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, SafeAreaView } from 'react-native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 import Header from './components/Header';
@@ -53,10 +53,11 @@ export default function App() {
   }
 
   return (
-    <View style={ styles.screen } >
+    // Safearea used to avoid ios notification bar line overlapping content of gameover screen, so here it will add padding top and bottom auto
+    <SafeAreaView style={ styles.screen } >
       <Header title='Guess a Number' />
       {content}
-    </View>
+    </SafeAreaView>
   );
 };
 
