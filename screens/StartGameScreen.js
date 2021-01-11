@@ -76,6 +76,7 @@ const StartGameScreen = props => {
         );
     };
 
+    // KeyboardAvoidingView is for fixing the view problem with the content when keyboard is active
     return (
         <ScrollView>
             <KeyboardAvoidingView behavior="position" keyboardVerticalOffset={30} >
